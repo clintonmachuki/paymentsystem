@@ -14,7 +14,6 @@ if ($transaction_id) {
             t.sender_id, 
             t.receiver_id, 
             t.amount, 
-            t.transaction_type, 
             t.transaction_date, 
             u1.username AS sender_username,
             u2.username AS receiver_username
@@ -51,18 +50,6 @@ $conn->close();
     <tr>
         <th>Date:</th>
         <td><?php echo htmlspecialchars($transaction['transaction_date']); ?></td>
-    </tr>
-    <tr>
-        <th>Type:</th>
-        <td>
-            <?php
-            if ($transaction['transaction_type'] == 'credit') {
-                echo '<span class="transaction-type deposit">&#9650; Deposit</span>';  // Green arrow up
-            } else {
-                echo '<span class="transaction-type withdrawal">&#9660; Withdrawal</span>';  // Red arrow down
-            }
-            ?>
-        </td>
     </tr>
     <tr>
         <th>Amount:</th>

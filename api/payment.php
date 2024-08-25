@@ -67,14 +67,14 @@ try {
 
     // Record the transaction
     $transaction_id = bin2hex(random_bytes(10)); // Generate a random transaction ID
-    $stmt = $conn->prepare("INSERT INTO Transactions (transaction_id, sender_id, receiver_id, amount, transaction_type) VALUES (?, ?, ?, ?, 'debit')");
+    $stmt = $conn->prepare("INSERT INTO Transactions (transaction_id, sender_id, receiver_id, amount) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssss", $transaction_id, $sender_id, $receiver_id, $amount);
     $stmt->execute();
     $stmt->close();
 
     // Commit transaction
     $conn->commit();
-    echo json_encode(['status' => 'success', 'message' => 'Payment processed successfully']);
+    echo json_encode(['status' => 'success', 'message' => 'Payment processed successfully', 'transaction_id' => $transaction_id]);
 } catch (Exception $e) {
     // Rollback transaction on error
     $conn->rollback();

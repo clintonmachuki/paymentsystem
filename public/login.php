@@ -1,5 +1,5 @@
 <?php
-require_once '../include/header.php';
+
 ?>
 
 <form action="../api/login.php" method="POST">

@@ -35,31 +35,34 @@ checkLoggedIn();
 
     <script>
         document.getElementById('payment-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); // Prevent the default form submission
 
-            const formData = new FormData(this);
+    const formData = new FormData(this);
 
-            fetch('../api/payment.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                const responseMessage = document.getElementById('response-message');
-                responseMessage.textContent = data.message;
+    fetch('../api/payment.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        const responseMessage = document.getElementById('response-message');
+        responseMessage.textContent = data.message;
 
-                if (data.status === 'success') {
-                    responseMessage.style.color = 'green';
-                } else {
-                    responseMessage.style.color = 'red';
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('response-message').textContent = 'An error occurred. Please try again.';
-                document.getElementById('response-message').style.color = 'red';
-            });
-        });
+        if (data.status === 'success') {
+            responseMessage.style.color = 'green';
+            // Redirect to the transaction detail page with the transaction ID
+            window.location.href = `transaction_detail.php?id=${data.transaction_id}`;
+        } else {
+            responseMessage.style.color = 'red';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('response-message').textContent = 'An error occurred. Please try again.';
+        document.getElementById('response-message').style.color = 'red';
+    });
+});
+
     </script>
 </body>
 </html>
