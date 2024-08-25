@@ -130,9 +130,6 @@ $conn->close();
 
 <div id="response-message"></div>
 
-<?php
-require_once '../include/footer.php';
-?>
 <script>
     // Handle complete request button
     document.querySelectorAll('.complete-request').forEach(button => {
@@ -153,7 +150,8 @@ require_once '../include/footer.php';
                 responseMessage.style.color = data.status === 'success' ? 'green' : 'red';
 
                 if (data.status === 'success') {
-                    this.closest('tr').remove(); // Remove the completed request row
+                    // Reload the page to refresh the request lists
+                    window.location.reload();
                 }
             })
             .catch(error => {
@@ -184,7 +182,8 @@ require_once '../include/footer.php';
                 responseMessage.style.color = data.status === 'success' ? 'green' : 'red';
 
                 if (data.status === 'success') {
-                    this.closest('tr').remove(); // Remove the canceled request row
+                    // Reload the page to refresh the request lists
+                    window.location.reload();
                 }
             })
             .catch(error => {
@@ -196,3 +195,4 @@ require_once '../include/footer.php';
         });
     });
 </script>
+
