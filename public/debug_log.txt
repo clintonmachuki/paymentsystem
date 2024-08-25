@@ -1,0 +1,114 @@
+Raw response: {
+            "ResponseCode": "0",
+            "ResponseDescription":"The service request has been accepted successsfully",
+            "MerchantRequestID":"1c5b-4ba8-815c-ac45c57a3db02114806",
+            "CheckoutRequestID":"ws_CO_25082024181209936792500038",
+            "ResultCode": "0",
+            "ResultDesc":"The service request is processed successfully."
+        }
+        
+Decoded response: stdClass Object
+(
+    [ResponseCode] => 0
+    [ResponseDescription] => The service request has been accepted successsfully
+    [MerchantRequestID] => 1c5b-4ba8-815c-ac45c57a3db02114806
+    [CheckoutRequestID] => ws_CO_25082024181209936792500038
+    [ResultCode] => 0
+    [ResultDesc] => The service request is processed successfully.
+)
+
+Raw response: {
+            "ResponseCode": "0",
+            "ResponseDescription":"The service request has been accepted successsfully",
+            "MerchantRequestID":"2654-4b64-97ff-b827b542881d962841",
+            "CheckoutRequestID":"ws_CO_25082024181456051792500038",
+            "ResultCode": "0",
+            "ResultDesc":"The service request is processed successfully."
+        }
+        
+Decoded response: stdClass Object
+(
+    [ResponseCode] => 0
+    [ResponseDescription] => The service request has been accepted successsfully
+    [MerchantRequestID] => 2654-4b64-97ff-b827b542881d962841
+    [CheckoutRequestID] => ws_CO_25082024181456051792500038
+    [ResultCode] => 0
+    [ResultDesc] => The service request is processed successfully.
+)
+
+Raw response: {
+            "ResponseCode": "0",
+            "ResponseDescription":"The service request has been accepted successsfully",
+            "MerchantRequestID":"1c5b-4ba8-815c-ac45c57a3db02114806",
+            "CheckoutRequestID":"ws_CO_25082024181209936792500038",
+            "ResultCode": "0",
+            "ResultDesc":"The service request is processed successfully."
+        }
+        
+Decoded response: stdClass Object
+(
+    [ResponseCode] => 0
+    [ResponseDescription] => The service request has been accepted successsfully
+    [MerchantRequestID] => 1c5b-4ba8-815c-ac45c57a3db02114806
+    [CheckoutRequestID] => ws_CO_25082024181209936792500038
+    [ResultCode] => 0
+    [ResultDesc] => The service request is processed successfully.
+)
+
+Raw response: {
+            "ResponseCode": "0",
+            "ResponseDescription":"The service request has been accepted successsfully",
+            "MerchantRequestID":"1c5b-4ba8-815c-ac45c57a3db02114806",
+            "CheckoutRequestID":"ws_CO_25082024181209936792500038",
+            "ResultCode": "0",
+            "ResultDesc":"The service request is processed successfully."
+        }
+        
+Decoded response: stdClass Object
+(
+    [ResponseCode] => 0
+    [ResponseDescription] => The service request has been accepted successsfully
+    [MerchantRequestID] => 1c5b-4ba8-815c-ac45c57a3db02114806
+    [CheckoutRequestID] => ws_CO_25082024181209936792500038
+    [ResultCode] => 0
+    [ResultDesc] => The service request is processed successfully.
+)
+
+Raw response: {
+            "ResponseCode": "0",
+            "ResponseDescription":"The service request has been accepted successsfully",
+            "MerchantRequestID":"1c5b-4ba8-815c-ac45c57a3db02114806",
+            "CheckoutRequestID":"ws_CO_25082024181209936792500038",
+            "ResultCode": "0",
+            "ResultDesc":"The service request is processed successfully."
+        }
+        
+Decoded response: stdClass Object
+(
+    [ResponseCode] => 0
+    [ResponseDescription] => The service request has been accepted successsfully
+    [MerchantRequestID] => 1c5b-4ba8-815c-ac45c57a3db02114806
+    [CheckoutRequestID] => ws_CO_25082024181209936792500038
+    [ResultCode] => 0
+    [ResultDesc] => The service request is processed successfully.
+)
+
+Raw response: {
+            "ResponseCode": "0",
+            "ResponseDescription":"The service request has been accepted successsfully",
+            "MerchantRequestID":"1c5b-4ba8-815c-ac45c57a3db02114806",
+            "CheckoutRequestID":"ws_CO_25082024181209936792500038",
+            "ResultCode": "0",
+            "ResultDesc":"The service request is processed successfully."
+        }
+        
+Decoded response: stdClass Object
+(
+    [ResponseCode] => 0
+    [ResponseDescription] => The service request has been accepted successsfully
+    [MerchantRequestID] => 1c5b-4ba8-815c-ac45c57a3db02114806
+    [CheckoutRequestID] => ws_CO_25082024181209936792500038
+    [ResultCode] => 0
+    [ResultDesc] => The service request is processed successfully.
+)
+

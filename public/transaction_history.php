@@ -5,7 +5,7 @@ checkLoggedIn();  // Ensure the user is logged in
 require_once '../include/header.php';
 require_once '../include/db.php';
 
-// Fetch user transactions from the database with usernames
+// Fetch user transactions from the database
 $user_id = $_SESSION['user_id'];
 
 $stmt = $conn->prepare("
@@ -23,12 +23,81 @@ $stmt = $conn->prepare("
     WHERE t.sender_id = ? OR t.receiver_id = ?
     ORDER BY t.transaction_date DESC
 ");
+
+if ($stmt === false) {
+    die('Prepare failed: ' . htmlspecialchars($conn->error));
+}
+
 $stmt->bind_param("ss", $user_id, $user_id);
-$stmt->execute();
+
+if (!$stmt->execute()) {
+    die('Execute failed: ' . htmlspecialchars($stmt->error));
+}
+
 $result = $stmt->get_result();
+
+if ($result === false) {
+    die('Get result failed: ' . htmlspecialchars($stmt->error));
+}
+
 $stmt->close();
-$conn->close();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .status-container {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .status {
+            font-size: 18px;
+            color: #333;
+        }
+        .success {
+            color: green;
+        }
+        .failed {
+            color: red;
+        }
+        .processing {
+            color: orange;
+        }
+        .transaction-type {
+            font-size: 18px;
+        }
+        .deposit {
+            color: green;
+        }
+        .withdrawal {
+            color: red;
+        }
+    </style>
+</head>
+<body>
 
 <h2>Transaction History</h2>
 
@@ -71,6 +140,7 @@ $conn->close();
     </tbody>
 </table>
 
-<?php
-require_once '../include/footer.php';
-?>
+
+
+</body>
+</html>
