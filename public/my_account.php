@@ -19,6 +19,7 @@ $conn->close();
 
 <h2>My Account</h2>
 
+<p><strong>User ID:</strong> <?php echo htmlspecialchars($user_id); ?></p>
 <p><strong>Username:</strong> <?php echo htmlspecialchars($username); ?></p>
 <p><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></p>
 <p><strong>Current Balance:</strong> $<?php echo number_format($balance, 2); ?></p>

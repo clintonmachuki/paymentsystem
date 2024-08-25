@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #4CAF50;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* General table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+thead th {
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ddd;
+    padding: 10px;
+}
+
+tbody td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Transaction type styles */
+.transaction-type {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.deposit {
+    color: green;
+}
+
+.withdrawal {
+    color: red;
+}
+
+/* Highlight rows on hover */
+table tbody tr {
+    cursor: pointer;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Sub-header styles */
+main h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+}
